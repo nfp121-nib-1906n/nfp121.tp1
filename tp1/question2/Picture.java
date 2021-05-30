@@ -20,7 +20,7 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
-
+ private boolean terreFixe = true;
     /**
      * Constructor for objects of class Picture
      */
@@ -82,5 +82,21 @@ public class Picture {
             sun.changeColor("yellow");
         }
     }
+ public void terreFixeM() {
+        int distance=80;
+        
+        if (terreFixe == true) { 
+            for (int i = 0; i < distance; i++) {
 
+            sun.moveVertical(1);
+            
+        }
+        terreFixe=false;
+        }
+        else{
+        for (int i = 0; i < distance; i++) {
+
+            sun.moveVertical(-1);
+            
+        }
 }
