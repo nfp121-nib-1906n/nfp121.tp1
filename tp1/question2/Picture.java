@@ -55,6 +55,14 @@ public class Picture {
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        sun = new Circle();
+        sun.changeColor("blue");
+        sun.moveHorizontal(180);
+        sun.moveVertical(-10);
+        sun.changeSize(60);
+        sun.makeVisible();
+        
     }
 
     /**
@@ -80,8 +88,10 @@ public class Picture {
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+            sun.changeColor("blue");
         }
     }
+  
  public void terreFixeM() {
         int distance=80;
         
