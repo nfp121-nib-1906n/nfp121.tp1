@@ -19,7 +19,7 @@ public class Picture {
     private Square wall;
     private Square window;
     private Triangle roof;
-    private Circle sun;
+    private Circle sun,sunDemo;
  private boolean terreFixe = true;
     /**
      * Constructor for objects of class Picture
@@ -56,12 +56,12 @@ public class Picture {
         sun.changeSize(60);
         sun.makeVisible();
         
-        sun = new Circle();
-        sun.changeColor("blue");
-        sun.moveHorizontal(180);
-        sun.moveVertical(-10);
-        sun.changeSize(60);
-        sun.makeVisible();
+        sunDemo = new Circle();
+        sunDemo.changeColor("yellow");
+        sunDemo.moveHorizontal(-15);
+        sunDemo.moveVertical(-10);
+        sunDemo.changeSize(60);
+        sunDemo.makeVisible();
         
     }
 
@@ -75,6 +75,7 @@ public class Picture {
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
+             sunDemo.changeColor("yellow");
         }
     }
 
@@ -89,6 +90,7 @@ public class Picture {
             roof.changeColor("green");
             sun.changeColor("yellow");
             sun.changeColor("blue");
+            sunDemo.changeColor("yellow");
         }
     }
   
@@ -96,17 +98,15 @@ public class Picture {
         int distance=80;
         
         if (terreFixe == true) { 
-            for (int i = 0; i < distance; i++) {
-
-            sun.moveVertical(1);
+            sun.slowMoveVertical(-250);
             
         }
         terreFixe=false;
         }
         else{
-        for (int i = 0; i < distance; i++) {
+        sun.slowMoveVertical(250);
 
-            sun.moveVertical(-1);
+           
             
         }
 }
