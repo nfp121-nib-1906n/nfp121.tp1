@@ -69,9 +69,7 @@ public class AuditeurCNAM {
         login = login.replaceAll("à", "a");
         return login;   
     }
-    public String login() {
-        return "";// à compléter
-    }
+ 
 
     /**
      * Lecture du nom de l'auditeur.
